@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trabajo: CatálogosWeb Studio</title>
+  <style>
+    /* Reset básico */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background: #f9fafb;
+      color: #333;
+      padding: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      scroll-behavior: smooth; /* Scroll suave */
+    }
+
+    /* Barra superior fija */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #1a73e8;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 0.7em 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    nav button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 1em;
+      cursor: pointer;
+      padding: 0.3em 0.6em;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    /* Ajustar padding-top para que el contenido no quede oculto debajo de la barra fija */
+    .content-wrapper {
+      padding-top: 60px; /* altura aproximada de nav */
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1, h2, h3 {
+      color: #1a73e8;
+      margin-bottom: 0.4em;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      border-bottom: 3px solid #1a73e8;
+      padding-bottom: 0.2em;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2em;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 0.2em;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5em;
+    }
+
+    p {
+      margin-top: 0.4em;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      margin-left: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2em 0;
+    }
+
+    .question {
+      background: #e8f0fe;
+      border-left: 4px solid #1a73e8;
+      padding: 1em;
+      margin: 1.5em 0;
+      font-style: italic;
+      color: #0b3d91;
+      border-radius: 4px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.8em 1em;
+      text-align: left;
+    }
+
+    th {
+      background-color: #1a73e8;
+      color: white;
+    }
+
+    .list-inline {
+      list-style: none;
+      padding: 0;
+      margin: 0.2em 0 1em 0;
+    }
+
+    .list-inline li {
+      background: #dbeafe;
+      display: inline-block;
+      margin: 0.2em 0.5em 0.2em 0;
+      padding: 0.3em 0.8em;
+      border-radius: 15px;
+      color: #1a73e8;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .container {
+      background: white;
+      padding: 2em 3em;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 3em;
+    }
+
+    .profile-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1a73e8;
+      margin-top: 0;
+    }
+
+    .job-title {
+      font-style: italic;
+      margin-top: 0.2em;
+      color: #555;
+    }
+
+    .highlight {
+      font-weight: 700;
+      color: #1a73e8;
+    }
+
+    .section {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button data-target="fase1">FASE 1</button>
+    <button data-target="fase1-idea">Idea del servicio</button>
+    <button data-target="fase1-metrica">Métrica o validación</button>
+    <button data-target="fase2">FASE 2</button>
+    <button data-target="hoja-vida">Hoja de vida</button>
+    <button data-target="estructura">Estructura de la empresa</button>
+  </nav>
+
+  <div class="content-wrapper">
+
+    <h1>Trabajo: CatálogosWeb Studio</h1>
+
+    <div class="container" id="fase1">
+      <h2>FASE 1: Crear mi producto</h2>
+
+      <h3 id="fase1-idea">1. Idea del servicio</h3>
+      <p>Mi idea se llama <strong>CatálogosWeb Studio</strong>. Básicamente, yo ofrezco el servicio de crear catálogos digitales personalizados para empresas o emprendimientos que quieren mostrar sus productos en internet.</p>
+      <p>En lugar de que tengan que pagarle a alguien más o usar una página complicada, yo mismo hago el diseño y la programación de los catálogos desde cero, con mi propio estilo y adaptado a lo que el cliente necesite.</p>
+      <p>Para mostrarlo, puedo hacer una maqueta virtual o enseñar una página de ejemplo con productos simulados.</p>
+
+      <hr />
+
+      <div class="question">
+        <p><strong>¿Por qué digo lo que digo?</strong></p>
+
+        <p><strong>¿Qué es un producto o servicio?</strong><br />
+        Un servicio es cuando una persona hace algo para ayudar a otros o resolver un problema. En este caso, mi servicio es crear catálogos web para negocios.</p>
+
+        <p><strong>¿Qué es tangible o intangible?</strong><br />
+        Lo mío es intangible, porque no es algo que se pueda tocar. Es digital, se entrega en línea y se ve desde una pantalla.</p>
+
+        <p><strong>¿Qué es una necesidad?</strong><br />
+        Una necesidad es algo que las personas o empresas realmente necesitan para mejorar su vida o su trabajo. Muchas empresas no tienen una forma moderna de mostrar lo que venden, así que mi servicio les ayuda a verse mejor y atraer más clientes.</p>
+      </div>
+
+      <h3 id="fase1-metrica">2. Métrica o validación</h3>
+
+      <p><strong>Población objetivo:</strong><br />
+      Mi servicio está pensado para emprendedores, tiendas pequeñas o medianas empresas que quieren tener presencia digital, pero no saben cómo hacerlo o no tienen tiempo.</p>
+
+      <p><strong>Test de producto:</strong><br />
+      Hice una pequeña encuesta entre conocidos que tienen negocios, y la mayoría me dijo que no tienen catálogo web ni saben cómo hacerlo.</p>
+
+      <ul>
+        <li>El <span class="highlight">80%</span> dijo que no tiene un catálogo digital.</li>
+        <li>El <span class="highlight">75%</span> dijo que sí le gustaría tener uno si fuera económico.</li>
+        <li>El <span class="highlight">85%</span> piensa que un catálogo web puede ayudar a vender más.</li>
+      </ul>
+
+      <p><strong>Investigación de mercado:</strong><br />
+      Hoy en día casi todo se mueve por internet. Según varios estudios, más del <span class="highlight">60%</span> de los compradores buscan primero en línea antes de decidir qué comprar. Entonces, un negocio sin presencia digital está perdiendo oportunidades, y justo eso es lo que mi servicio soluciona.</p>
+
+      <p><strong>Tipo de producto:</strong><br />
+      Es un servicio intangible, porque lo que ofrezco es mi trabajo y conocimiento en programación y diseño web.</p>
+    </div>
+
+    <div class="container" id="fase2">
+      <h2>FASE 2: Poner en valor mi producto</h2>
+
+      <h3 id="hoja-vida">1. Hoja de vida ideal (para el cargo de programador web)</h3>
+      <p><span class="profile-name">Nombre:</span> Matías Salazar Areiza</p>
+      <p class="job-title">Cargo: Desarrollador Web y Fundador de CatálogosWeb Studio</p>
+
+      <div class="section">
+        <h4>Perfil personal:</h4>
+        <p>Soy una persona creativa, responsable y apasionada por la tecnología. Me gusta mucho programar y crear páginas web que se vean bien y funcionen bien. Quiero usar mis conocimientos para ayudar a empresas pequeñas a crecer digitalmente.</p>
+      </div>
+
+      <div class="section">
+        <h4>Estudios:</h4>
+        <ul class="list-inline">
+          <li>Técnico en Programación Web</li>
+          <li>Cursos en HTML, CSS, JavaScript y diseño UX/UI</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h4>Experiencia:</h4>
+        <p>2023–2025: He hecho páginas web y catálogos para algunos emprendimientos locales y también por práctica personal.</p>
+      </div>
+
+      <div class="section">
+        <h4>Habilidades:</h4>
+        <ul class="list-inline">
+          <li>Programación</li>
+          <li>Diseño web</li>
+          <li>Organización</li>
+          <li>Creatividad</li>
+          <li>Manejo de clientes</li>
+          <li>Trabajo en equipo</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h3 id="estructura">2. Estructura de la empresa: “CatálogosWeb Studio”</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Área</th>
+            <th>Responsable</th>
+            <th>Rol o función principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Diseño y Programación</td>
+            <td>Matías Salazar</td>
+            <td>Crear los catálogos digitales y personalizarlos para cada cliente.</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>Valeria Valencia</td>
+            <td>Encargada de redes sociales y promoción del servicio.</td>
+          </tr>
+          <tr>
+            <td>Administración</td>
+            <td>Andrés Muñoz</td>
+            <td>Manejar los tiempos, los clientes y los proyectos.</td>
+          </tr>
+          <tr>
+            <td>Contabilidad</td>
+            <td>Pablo Aristizabal</td>
+            <td>Llevar las cuentas, cobros y gastos.</td>
+          </tr>
+          <tr>
+            <td>Análisis (B.I)</td>
+            <td>Miguel Osorio</td>
+            <td>Revisar datos y buscar formas de mejorar el servicio.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <div class="question">
+        <p><strong>¿Por qué digo lo que digo?</strong></p>
+
+        <p><strong>Diferencia entre empresa y microempresa:</strong><br />
+        Una empresa es una organización grande con muchos empleados y recursos. Una microempresa es más pequeña, normalmente manejada por una o pocas personas.</p>
+
+        <p>Mi proyecto empieza como una microempresa digital, ya que soy yo quien hace todo el trabajo de programación y diseño, pero con la idea de crecer con el tiempo.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Seleccionamos todos los botones del nav
+    const buttons = document.querySelectorAll('nav button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const targetElem = document.getElementById(targetId);
+
+        if (targetElem) {
+          // Scroll suave hacia el elemento, tomando en cuenta la altura fija del nav
+          const navHeight = document.querySelector('nav').offsetHeight;
+          const elemPosition = targetElem.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elemPosition - navHeight - 10, // ajustar un poco el espacio arriba
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
